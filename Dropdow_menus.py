@@ -11,12 +11,20 @@ def show():
     mylabel.pack()
 
 
+options = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+]
+
 # Texto predeterminado
 clicked = StringVar()
-clicked.set("Monday")
+clicked.set(options[0])
 
 # Drop down box
-drop = OptionMenu(root, clicked, "Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+drop = OptionMenu(root, clicked, *options)
 drop.pack()
 
 mybutton = Button(root, text="Show Selection", command=show)
