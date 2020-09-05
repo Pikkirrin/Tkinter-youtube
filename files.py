@@ -10,8 +10,10 @@ root.iconbitmap("Head.ico")
 def open():
     global my_image
     root.filename = filedialog.askopenfilename(
-        initialdir="/Users/VictorHGH/Documents/Programación/Tkinter-youtube/images"
-        , title="Select a file", filetypes=(("png files", "*.png"), ("all files", "*.*")))
+        initialdir="/Users/VictorHGH/Documents/Programación/Tkinter-youtube/images",
+        title="Select a file",
+        filetypes=(("png files", "*.png"), ("all files", "*.*"))
+    )
 
     my_image = ImageTk.PhotoImage(Image.open(root.filename))
 
